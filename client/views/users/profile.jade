@@ -1,0 +1,21 @@
+h3 Profile
+
+.row
+	.col-xs-4
+		.form-group
+			label Name
+			input.form-control(type='string', ng-model='user.name')
+			label Email
+			input.form-control(type='string', ng-model='user.email')
+			button.btn.btn-xs.btn-success(ng-click='update(user)') Update
+	.col-xs-4
+		h4 Photo Center
+			button.btn.btn-success(ng-click='cameraOn()') Start
+			button.btn.btn-danger(ng-click='cameraOff()') Stop
+			button.btn.btn-warning(ng-click='takePhoto()') Snap
+.row
+	.col-xs-4
+		#camera
+	.col-xs-4
+		img#photo(ng-src='{{user.photo}}')
+	.col-xs-4
